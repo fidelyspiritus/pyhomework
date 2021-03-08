@@ -13,5 +13,5 @@ jobs:
         with:
           python-version: 3.8
 
-      - run: pip run isort --profile black --check
-      - run: pip run black --check .
+      - run: isort --profile black --check
+      - run: black --check .
