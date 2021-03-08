@@ -1,4 +1,22 @@
-- name: python-isort
-  uses: isort/isort-action@v0.1.0
-- name: Black Check
-  uses: jpetrucciani/black-check@20.8b1
+name: action
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies with pipenv
+        run: |
+          pip install pipenv
+          pipenv install --deploy --dev
+
+      - run: pipenv run isort --profile black --check
+      - run: pipenv run black --check .
