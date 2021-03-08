@@ -7,7 +7,9 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-
+      - uses: isort/isort-action@v0.1.0
+      - uses: jpetrucciani/black-check@20.8b1
+      
       - name: Setup Python
         uses: actions/setup-python@v1
         with:
