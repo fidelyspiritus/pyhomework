@@ -10,11 +10,11 @@ from typing import Sequence
 
 
 def check_fibonacci(data: Sequence[int]) -> bool:
-    if len(Sequence) < 3:
+    if len(data) < 3:
         return False
-    while len(Sequence) >= 3:
-        first, second, third = Sequence[0], Sequence[1], Sequence[2]
+    while len(data) >= 3:
+        first, second, third = data[0], data[1], data[2]
         if third != first + second:
             return False
-        Sequence = Sequence[1:]
+        data = data[1:]
     return True
