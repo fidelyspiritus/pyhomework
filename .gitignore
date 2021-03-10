@@ -142,3 +142,4 @@ cython_debug/
 *.xml
 .idea/pyhomework.iml
 .idea/modules.xml
+.idea/.name
