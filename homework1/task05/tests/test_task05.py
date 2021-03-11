@@ -11,6 +11,8 @@ from homework1.task05 import find_maximal_subarray_sum
         ([1, 3, -1, -3, 5, 3, 6, 7], 3, 16),
     ],
 )
-def test_find_maximal_subarray_sum(value: List[int], int, expected_result: int):
-    actual_result = find_maximal_subarray_sum(value)
+def test_find_maximal_subarray_sum(
+    value: List[int], parameter: int, expected_result: int
+):
+    actual_result = find_maximal_subarray_sum(value, parameter)
     assert actual_result == expected_result

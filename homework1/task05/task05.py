@@ -14,8 +14,11 @@ from typing import List
 
 def find_maximal_subarray_sum(nums: List[int], k: int) -> int:
     max_sum = 0
-    for i in range(k):
-        a = max(nums)
-        if a > 0:
-            max_sum += a
-            nums.remove(a)
+    for first in range(len(nums)):
+        for last in range(first, first + k + 1):
+            if last > len(nums):
+                break
+            if sum((nums[first:last])) > max_sum:
+                max_sum = sum((nums[first:last]))
+
+    return max_sum

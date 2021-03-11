@@ -17,3 +17,5 @@ def check_sum_of_four(a: List[int], b: List[int], c: List[int], d: List[int]) ->
                 diff = -i - j - k
                 if diff in d:
                     count += d.count(diff)
+
+    return count
