@@ -17,16 +17,16 @@ Input: [2,2,1,1,1,2,2]
 Output: 2, 1
 
 """
-from typing import List, Tuple, FrozenSet
+from typing import List, Set, Tuple
 
 
 def major_and_minor_elem(inp: List) -> Tuple[int, int]:
-    numbers = {inp}
-    major, minor = [inp.count(inp[0]), inp[0]], [inp.count(inp[0]), inp[0]]
+    numbers = set(inp)
+    major, minor = (inp.count(inp[0]), inp[0]), (inp.count(inp[0]), inp[0])
     for num in numbers:
         if inp.count(num) > major[0]:
             major = (inp.count(num), num)
         if inp.count(num) < minor[0]:
             minor = (inp.count(num), num)
 
-    return major[1], minor[1]
+    return (major[1], minor[1])

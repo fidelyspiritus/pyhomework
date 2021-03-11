@@ -2,13 +2,13 @@ from typing import List
 
 import pytest
 
-from homework1.task04 import check_sum_of_four
+from homework1.task04.task04 import check_sum_of_four
 
 
 @pytest.mark.parametrize(
     ["a", "b", "c", "d", "expected_result"],
     [
-        ([1, 2], [1, 2], [-2, 1], [-3, -4], 2),
+        ([1, 2], [1, 2], [-2, 1], [-3, -4], 3),
         ([0, 0], [0, 0], [0, 0], [0, 0], 2 ** 4),
     ],
 )

@@ -12,6 +12,8 @@ from typing import Sequence
 def check_fibonacci(data: Sequence[int]) -> bool:
     if len(data) < 3:
         return False
+    if data[0] != 1 or data[0] != 0 and data[1] != 1:
+        return False
     while len(data) >= 3:
         first, second, third = data[0], data[1], data[2]
         if third != first + second:
