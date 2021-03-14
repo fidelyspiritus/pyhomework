@@ -2,7 +2,7 @@ from typing import List
 
 import pytest
 
-from homework2.hw1.hw1 import (
+from homework2.hw1 import (
     count_non_ascii_chars,
     count_punctuation_chars,
     get_longest_diverse_words,

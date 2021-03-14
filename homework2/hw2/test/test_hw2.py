@@ -13,5 +13,5 @@ from homework2.hw2.hw2 import major_and_minor_elem
     ],
 )
 def test_major_and_minor_elem(value: List, expected_result: Tuple[int, int]):
-    actual_result = test_major_and_minor_elem(value)
+    actual_result = major_and_minor_elem(value)
     assert actual_result == expected_result

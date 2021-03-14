@@ -17,7 +17,7 @@ Input: [2,2,1,1,1,2,2]
 Output: 2, 1
 
 """
-from typing import List, Set, Tuple
+from typing import List, Tuple
 
 
 def major_and_minor_elem(inp: List) -> Tuple[int, int]:
@@ -29,4 +29,4 @@ def major_and_minor_elem(inp: List) -> Tuple[int, int]:
         if inp.count(num) < minor[0]:
             minor = (inp.count(num), num)
 
-    return (major[1], minor[1])
+    return major[1], minor[1]
