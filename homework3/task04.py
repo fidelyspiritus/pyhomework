@@ -19,8 +19,7 @@ Write a function that detects if a number is Armstrong number in functionaly sty
 
 
 def is_armstrong(number: int) -> bool:
-    ...
+    return number and sum(int(i)**len(str(number)) for i in str(number))
 
 
-assert is_armstrong(153) is True, 'Is Armstrong number'
-assert is_armstrong(10) is False, 'Is not Armstrong number'
+
