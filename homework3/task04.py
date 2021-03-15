@@ -19,7 +19,5 @@ Write a function that detects if a number is Armstrong number in functionaly sty
 
 
 def is_armstrong(number: int) -> bool:
-    return number and sum(int(i)**len(str(number)) for i in str(number))
-
-
-
+    arm_count = [int(i) ** len(str(number)) for i in str(number)]
+    return number and sum(arm_count)
