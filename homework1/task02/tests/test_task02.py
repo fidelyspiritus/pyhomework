@@ -2,7 +2,7 @@ from typing import Sequence
 
 import pytest
 
-from homework1.task02.task02 import check_fibonacci
+from homework1.task02 import check_fibonacci
 
 
 @pytest.mark.parametrize(
