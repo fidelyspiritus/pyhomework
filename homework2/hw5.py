@@ -12,4 +12,3 @@ def custom_range(
         stop = array.index(stop)
 
     return list(array[start:stop:step])
-
